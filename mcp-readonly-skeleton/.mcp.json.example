@@ -1,0 +1,12 @@
+{
+  "_comment": "copy to .mcp.json in your project root (or merge into ~/.claude.json). then claude code lists 'readonly-skeleton' and its read-only tools.",
+  "_warning": "use an ABSOLUTE path to server.py. a relative path won't resolve, claude code launches the server from its own cwd, not yours.",
+  "_alternative": "or let the cli write this: claude mcp add --scope project --transport stdio readonly-skeleton -- python3 /absolute/path/to/server.py",
+  "mcpServers": {
+    "readonly-skeleton": {
+      "type": "stdio",
+      "command": "python3",
+      "args": ["/absolute/path/to/server.py"]
+    }
+  }
+}
